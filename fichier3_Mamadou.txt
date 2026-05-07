@@ -1,1 +1,175 @@
-Merci  
+Commandes Git essentielles
+1. Initialiser un dépôt Git
+git init
+
+Crée un nouveau dépôt Git dans le dossier actuel.
+
+2. Cloner un dépôt GitHub
+git clone https://github.com/user/projet.git
+
+Télécharge un projet distant sur ton ordinateur.
+
+3. Vérifier l’état des fichiers
+git status
+
+Montre :
+
+les fichiers modifiés
+les fichiers ajoutés
+les fichiers non suivis
+4. Ajouter un fichier au staging
+git add fichier.txt
+
+Prépare un fichier pour le commit.
+
+5. Ajouter tous les fichiers
+git add .
+
+Ajoute tous les fichiers modifiés.
+
+6. Créer un commit
+git commit -m "Mon message"
+
+Enregistre les modifications localement.
+
+7. Voir l’historique des commits
+git log
+
+Affiche tous les commits.
+
+Version courte :
+
+git log --oneline
+8. Envoyer les modifications vers GitHub
+git push
+
+Envoie les commits vers le dépôt distant.
+
+9. Récupérer les modifications de GitHub
+git pull
+
+Télécharge et fusionne les changements distants.
+
+10. Télécharger sans fusionner
+git fetch
+
+Récupère les changements sans les appliquer.
+
+11. Voir les branches
+git branch
+
+Affiche toutes les branches locales.
+
+12. Créer une branche
+git branch dev
+
+Crée une nouvelle branche appelée dev.
+
+13. Changer de branche
+git checkout dev
+
+ou version moderne :
+
+git switch dev
+14. Créer et changer de branche directement
+git checkout -b dev
+
+ou :
+
+git switch -c dev
+15. Fusionner une branche
+git merge dev
+
+Fusionne dev dans la branche actuelle.
+
+16. Supprimer une branche
+git branch -d dev
+
+Supprime la branche locale.
+
+17. Voir les dépôts distants
+git remote -v
+
+Affiche les URLs GitHub connectées.
+
+18. Ajouter un dépôt distant
+git remote add origin https://github.com/user/projet.git
+
+Lie le projet local à GitHub.
+
+19. Premier push vers GitHub
+git push -u origin main
+
+Envoie la branche principale vers GitHub.
+
+20. Renommer la branche master en main
+git branch -M main
+21. Voir les différences
+git diff
+
+Montre les modifications non commit.
+
+22. Annuler les modifications d’un fichier
+git checkout -- fichier.txt
+
+ou :
+
+git restore fichier.txt
+23. Retirer un fichier du staging
+git reset fichier.txt
+24. Revenir au dernier commit
+git reset --hard HEAD
+
+⚠️ Supprime les modifications non sauvegardées.
+
+25. Supprimer un fichier avec Git
+git rm fichier.txt
+26. Renommer un fichier
+git mv ancien.txt nouveau.txt
+27. Voir les commits graphiquement
+git log --oneline --graph --all
+28. Sauvegarder temporairement des modifications
+git stash
+
+Restaure ensuite :
+
+git stash pop
+29. Voir la configuration Git
+git config --list
+30. Configurer ton nom
+git config --global user.name "Mamadou"
+31. Configurer ton email
+git config --global user.email "email@gmail.com"
+32. Voir l’adresse du dépôt GitHub
+git remote get-url origin
+33. Résoudre un push refusé
+git pull origin main --rebase
+git push origin main
+34. Cloner une branche spécifique
+git clone -b dev https://github.com/user/projet.git
+35. Voir les tags
+git tag
+36. Créer un tag
+git tag v1.0
+
+Envoyer les tags :
+
+git push origin --tags
+37. Voir qui a modifié chaque ligne
+git blame fichier.txt
+38. Voir un commit précis
+git show ID_COMMIT
+Workflow Git complet
+Nouveau projet
+git init
+git add .
+git commit -m "Premier commit"
+Connexion à GitHub
+git remote add origin https://github.com/user/projet.git
+git branch -M main
+git push -u origin main
+Travail quotidien
+git pull
+git add .
+git commit -m "Modification"
+git push
